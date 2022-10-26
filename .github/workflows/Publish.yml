@@ -17,23 +17,21 @@ jobs:
     - name: Checkout distribution repository
       uses: actions/checkout@v2
       with:
-        repository: bs-community/plugins-dist
+        repository: tharow-services/plugins-dist
         path: '.dist'
         token: ${{ secrets.GH_TOKEN }}
     - name: Download nano
       run: ./download-nano.ps1
       shell: pwsh
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Build
       run: ./nano
       env:
         RUST_LOG: info
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Publish
       run: ./publish.ps1
       shell: pwsh
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
