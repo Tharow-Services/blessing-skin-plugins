@@ -13,7 +13,7 @@ git add .
 $shouldUpdate = git status -s
 if ($shouldUpdate) {
   git commit -m "Publish"
-  git remote set-url origin "https://tadaf:$token@github.com/Tharow-Services/plugins-dist.git"
+  git remote set-url origin "https://tharowt:$token@github.com/Tharow-Services/plugins-dist.git"
   git push origin master
 }
 
