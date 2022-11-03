@@ -1,0 +1,6 @@
+general:
+  title: Microsoft Azure OAuth Provider
+  clientId: Application (Client) ID
+  clientSecret: Application Secret
+  tenantId: Directory (tenant) ID
+  redirectUri: Redirect Uri

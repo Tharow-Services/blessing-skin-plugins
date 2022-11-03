@@ -28,6 +28,16 @@ Route::prefix('sessionserver/session/minecraft')->group(function () {
 Route::post('api/profiles/minecraft', 'ProfileController@searchMultipleProfiles');
 Route::get('api/users/profiles/minecraft/{username}', 'ProfileController@searchSingleProfile');
 
+Route::prefix('minecraftservices')
+    ->group(function () {
+        Route::post('launcher/login', 'ServicesController@login');
+        Route::middleware(['Yggdrasil\Middleware\CheckBearerToken'])->group(function () {
+            Route::get('minecraft/profile', 'ServicesController@profile');
+            Route::get('player/attributes', 'ServicesController@attributes');
+            Route::get('player/certificates', 'ServicesController@certificates');
+        });
+    });
+
 Route::prefix('api/user/profile')
     ->middleware(['Yggdrasil\Middleware\CheckBearerToken'])
     ->group(function () {

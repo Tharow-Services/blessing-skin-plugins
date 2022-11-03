@@ -98,10 +98,18 @@ class ConfigController extends Controller
                     'homepage' => url('/'),
                 ],
                 'feature.non_email_login' => true,
+                'feature.no_mojang_namespace'=>true,
+                'feature.enable_mojang_anti_features'=>false,
+                'feature.enable_profile_key'=>false,
+                'feature.legacy_skin_api'=>false,
             ],
             'skinDomains' => $skinDomains,
             'signaturePublickey' => $keyData['key'],
         ];
+
+        if (optional($pluginManager->get('legacy-api'))->isEnabled()) {
+            $result['meta']['feature.legacy_skin_api'] = true;
+        }
 
         if (!optional($pluginManager->get('disable-registration'))->isEnabled()) {
             $result['meta']['links']['register'] = url('auth/register');

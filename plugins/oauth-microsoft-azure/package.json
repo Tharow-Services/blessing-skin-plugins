@@ -1,0 +1,20 @@
+{
+  "name": "oauth-microsoft-azure",
+  "title": "Blessing\\OAuth\\Azure::general.title",
+  "version": "0.2.6",
+  "description": "Blessing\\OAuth\\Azure::general.description",
+  "author": "GPlane",
+  "url": "",
+  "namespace": "Blessing\\OAuth\\Azure",
+  "require": {
+    "blessing-skin-server": "^5|^6",
+    "oauth": "^1.0.0"
+  },
+  "enchants": {
+    "icon": {
+      "fa": "microsoft",
+      "faType": "fab",
+      "bg": "primary"
+    }
+  }
+}

@@ -17,6 +17,7 @@ class Profile
 {
     public $uuid;
     public $name;
+    /** @var Player */
     public $player;
     public $model = 'default';
     public $skin;

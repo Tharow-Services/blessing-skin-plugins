@@ -6,6 +6,7 @@ use App\Models\Player;
 use App\Models\User;
 use Cache;
 use Carbon\CarbonImmutable;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Arr;
