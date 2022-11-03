@@ -1,0 +1,24 @@
+{
+    "version":  1,
+    "packages":  [
+                     {
+                         "version":  "printempw",
+                         "name":  "yggdrasil-api",
+                         "dist":  {
+                                      "shasum":  {
+                                                     "Algorithm":  "SHA1",
+                                                     "Hash":  "4D64E5B61A90AA301917BB044882597DD835B3A8",
+                                                     "Path":  "C:\\Users\\TherayTharow\\IdeaProjects\\blessing-skin-plugins\\.dist\\yggdrasil-api.zip"
+                                                 },
+                                      "url":  "https://github.com/Tharow-Services/blessing-skin-server/releases/download/16SEP22/yggdrasil-api.zip",
+                                      "type":  "zip"
+                                  },
+                         "description":  "Yggdrasil API + authlib-injector = ✨",
+                         "require":  {
+                                         "blessing-skin-server":  "^6"
+                                     },
+                         "author":  "printempw",
+                         "title":  "Yggdrasil API"
+                     }
+                 ]
+}
